@@ -1,38 +1,38 @@
-# Esteira de Aprendizado de Máquina
+# Pipeline de Aprendizado de Máquina para Previsão de Doenças Cardíacas
 
-## Descrição do Projeto
+Este repositório contém um pipeline completo de aprendizado de máquina para prever doenças cardíacas usando o conjunto de dados de Doenças Cardíacas da UCI. O pipeline é implementado em um Jupyter Notebook e inclui carregamento de dados, pré-processamento, engenharia de recursos, treinamento de modelo, avaliação e funcionalidades de previsão. O projeto é modular, reprodutível e extensível para experimentações futuras.
 
-Este projeto implementa uma esteira básica de aprendizado de máquina em um notebook Python (`.ipynb`). A esteira abrange as etapas essenciais de um fluxo de trabalho de ML, incluindo:
+## Sumário
+- [Visão Geral do Projeto](#visão-geral-do-projeto)
+- [Funcionalidades](#funcionalidades)
+- [Conjunto de Dados](#conjunto-de-dados)
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [Etapas do Pipeline](#etapas-do-pipeline)
+- [Resultados](#resultados)
+- [Melhorias Futuras](#melhorias-futuras)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
 
-1.  **Carregamento de Dados**: Utiliza um conjunto de dados de exemplo (Iris) para demonstração, mas é facilmente adaptável para qualquer arquivo CSV.
-2.  **Análise Descritiva**: Apresenta estatísticas gerais e informações sobre o dataset.
-3.  **Transformação de Colunas**: Demonstra a criação de uma nova feature a partir de colunas existentes.
-4.  **Transformação de Linhas**: Realiza uma filtragem de dados para remover potenciais outliers.
-5.  **Divisão de Subconjuntos**: Separa o dataset em conjuntos de treinamento, validação e testes.
-6.  **Treinamento e Avaliação do Modelo**: Treina um modelo de classificação (Árvore de Decisão) e o avalia em um conjunto de validação.
-7.  **Métricas de Desempenho**: Apresenta a matriz de confusão e a acurácia do modelo no conjunto de testes.
-8.  **Predição de Exemplo**: Demonstra como usar o modelo treinado para fazer uma predição em uma nova amostra.
+## Visão Geral do Projeto
+Este projeto implementa um pipeline de aprendizado de máquina para prever a presença de doenças cardíacas com base em dados de pacientes. Utiliza um Classificador de Árvore de Decisão e inclui etapas detalhadas de exploração de dados, pré-processamento e avaliação. O pipeline segue boas práticas, com integração opcional de banco de dados para rastreamento de experimentos e visualizações abrangentes para interpretabilidade.
 
-## Como Reproduzir a Execução
+## Funcionalidades
+- **Carregamento de Dados**: Obtém o conjunto de dados de Doenças Cardíacas da UCI usando o pacote `ucimlrepo`.
+- **Análise Exploratória de Dados (EDA)**: Estatísticas descritivas, análise de correlação e visualizações (gráficos de pizza, histogramas, mapas de calor).
+- **Engenharia de Recursos**: Cria a razão colesterol-idade para melhorar o desempenho do modelo.
+- **Pré-processamento**: Trata valores ausentes, remove outliers e escala os recursos.
+- **Treinamento do Modelo**: Treina um Classificador de Árvore de Decisão com hiperparâmetros configuráveis.
+- **Avaliação**: Fornece métricas de precisão, matriz de confusão, relatório de classificação e análise de importância de recursos.
+- **Previsão**: Permite previsões em amostras individuais com visualização de probabilidades.
+- **Rastreamento de Experimentos**: Integração opcional com banco de dados SQLite para armazenar resultados.
+- **Visualização**: Gráficos detalhados para distribuição de dados, efeitos de escalonamento e desempenho do modelo.
 
-Para reproduzir a execução deste projeto, siga os passos abaixo:
+## Conjunto de Dados
+O pipeline utiliza o [conjunto de dados de Doenças Cardíacas da UCI](https://archive.ics.uci.edu/ml/datasets/heart+disease), que contém 303 amostras com 13 características (como idade, colesterol, pressão arterial) e uma variável alvo binária indicando a presença (1) ou ausência (0) de doença cardíaca.
 
-### Pré-requisitos
-
-* Python 3.x instalado.
-* Jupyter Notebook ou JupyterLab (recomendado para `.ipynb`). Alternativamente, você pode usar Google Colab.
-
-### Bibliotecas Necessárias
-
-As seguintes bibliotecas Python são utilizadas:
-
-* `pandas`
-* `numpy`
-* `scikit-learn`
-* `matplotlib`
-* `seaborn`
-
-Você pode instalá-las usando pip, se ainda não as tiver:
-
-```bash
-pip install pandas numpy scikit-learn matplotlib seaborn
+## Instalação
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/previsao-doencas-cardiacas.git
+   cd previsao-doencas-cardiacas
