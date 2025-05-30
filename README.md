@@ -36,3 +36,6 @@ O pipeline utiliza o [conjunto de dados de Doenças Cardíacas da UCI](https://a
    ```bash
    git clone https://github.com/seu-usuario/previsao-doencas-cardiacas.git
    cd previsao-doencas-cardiacas
+
+## Video do Projeto 2
+   https://youtu.be/ISiIKGaG7Bo
